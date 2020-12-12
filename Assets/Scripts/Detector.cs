@@ -15,8 +15,8 @@ public class Detector : MonoBehaviour
     private const int IMAGE_MEAN = 0;
     private const float IMAGE_STD = 255.0F;
     // ONNX model input and output name. Modify when switching models.
-    private const string INPUT_NAME = "yolov2-tiny/net1";
-    private const string OUTPUT_NAME = "yolov2-tiny/convolutional9/BiasAdd";
+    private const string INPUT_NAME = "image";
+    private const string OUTPUT_NAME = "grid";
 
     public const int IMAGE_SIZE = 416;
 
@@ -30,7 +30,7 @@ public class Detector : MonoBehaviour
     public const int COL_COUNT = 13;
     public const int BOXES_PER_CELL = 5;
     public const int BOX_INFO_FEATURE_COUNT = 5;
-    public const int CLASS_COUNT = 100;
+    public const int CLASS_COUNT = 20;
     public const float CELL_WIDTH = 32;
     public const float CELL_HEIGHT = 32;
     private string[] labels;
